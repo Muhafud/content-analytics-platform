@@ -27,9 +27,6 @@ export interface SentimentAnalysis {
 }
 
 export class OpenAIService {
-  /**
-   * Analyze content for sentiment, topics, and insights
-   */
   static async analyzeContent(content: string, platform?: string): Promise<ContentAnalysis> {
     try {
       const prompt = `

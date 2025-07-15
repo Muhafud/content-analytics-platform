@@ -47,7 +47,7 @@ export async function GET(request: NextRequest) {
       platform,
     };
 
-    // If accounts are provided, fetch real social media data
+    // If accounts are provided fetch real social media data
     if (accounts) {
       try {
         const accountData = JSON.parse(accounts);
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
         };
       } catch (error) {
         console.error('Error fetching social media data:', error);
-        // Continue with mock data if social media fetch fails
+        
       }
     }
 
@@ -85,12 +85,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
     
-    // In a real app, you would:
-    // 1. Validate the incoming data
-    // 2. Process it with AI models
-    // 3. Store it in your database
-    // 4. Trigger real-time updates
-
+   
     console.log('Received analytics data:', body);
 
     return NextResponse.json({
