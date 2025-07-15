@@ -92,7 +92,7 @@ The application will be available at http://localhost:3000
 
 ## Features Overview
 
-### 🎯 Core Features
+### Core Features
 
 1. **Real-time Analytics Dashboard**
    - Live engagement metrics

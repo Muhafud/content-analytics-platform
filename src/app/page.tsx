@@ -12,10 +12,11 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react';
+import { DarkModeToggle } from '@/components/ui/DarkModeToggle';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 transition-colors duration-500">
       {/* Navigation */}
       <nav className="relative z-10 px-6 py-4">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -23,21 +24,22 @@ export default function HomePage() {
             <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-gray-900">ContentAI</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">ContentAI</span>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#features" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               Features
             </Link>
-            <Link href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#pricing" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               Pricing
             </Link>
-            <Link href="#about" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Link href="#about" className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
               About
             </Link>
             <Link href="/auth/signin" className="btn-primary">
               Get Started
             </Link>
+            <DarkModeToggle />
           </div>
         </div>
       </nav>
@@ -203,16 +205,116 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Demo Section */}
+      <section id="demo" className="px-6 py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              See ContentAI in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Watch how our platform analyzes your content and provides actionable insights
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Demo Content */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-6 shadow-lg border">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Live Analytics Demo</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Total Engagement</span>
+                    <span className="font-semibold text-green-600">+24.5K</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Engagement Rate</span>
+                    <span className="font-semibold text-blue-600">4.2%</span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-600">Top Performing Post</span>
+                    <span className="font-semibold text-purple-600">AI Analytics Guide</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg border">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">AI Insights</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <p className="text-sm text-gray-600">Your content performs 23% better on Tuesdays</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <p className="text-sm text-gray-600">Hashtags increase engagement by 45%</p>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-purple-500 rounded-full mt-2"></div>
+                    <p className="text-sm text-gray-600">Video content gets 3x more shares</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Demo Actions */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-xl p-8 shadow-lg border">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Try It Yourself</h3>
+                
+                <div className="space-y-4">
+                  <Link href="/dashboard" className="w-full btn-primary text-center py-3">
+                    View Live Dashboard
+                  </Link>
+                  
+                  <div className="text-center">
+                    <span className="text-sm text-gray-500">or</span>
+                  </div>
+                  
+                  <a 
+                    href="/api/social-media"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full btn-secondary py-3 text-center block"
+                  >
+                    Test Social Media API
+                  </a>
+                  
+                  <a 
+                    href="/api/analytics"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full btn-secondary py-3 text-center block"
+                  >
+                    Test Analytics API
+                  </a>
+                </div>
+                
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                  <h4 className="font-semibold text-blue-900 mb-2">What You'll See:</h4>
+                  <ul className="text-sm text-blue-800 space-y-1">
+                    <li>• Real-time social media metrics</li>
+                    <li>• AI-powered content insights</li>
+                    <li>• Multi-platform analytics</li>
+                    <li>• Predictive engagement data</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-      <section className="px-6 py-20 bg-gray-50">
+      <section className="px-6 py-20 bg-white dark:bg-gray-900 transition-colors duration-500">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to transform your content strategy?
           </h2>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
             Join hundreds of marketing professionals who are already using AI to optimize their content.
           </p>
-          <Link href="/auth/signin" className="btn-primary text-lg px-8 py-4">
+          <Link href="/auth/signin" className="btn-primary text-lg px-8 py-4 mx-auto inline-flex items-center justify-center">
             Start Your Free Trial
             <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
