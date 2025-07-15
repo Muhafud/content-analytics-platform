@@ -2,7 +2,7 @@
 
 A real-time content analytics dashboard that uses AI to analyze social media posts, blog content, and marketing materials to provide actionable insights on engagement, sentiment, and audience targeting.
 
-## 🚀 Features
+## Features
 
 - **Real-time Analytics**: Live dashboard with WebSocket updates
 - **AI-Powered Insights**: Sentiment analysis and content optimization suggestions
@@ -12,7 +12,7 @@ A real-time content analytics dashboard that uses AI to analyze social media pos
 - **Predictive Analytics**: AI models for engagement prediction
 - **Automated Reporting**: AI-generated insights and recommendations
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Frontend**: Next.js 14, TypeScript, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express, Python (AI processing)
@@ -22,11 +22,11 @@ A real-time content analytics dashboard that uses AI to analyze social media pos
 - **Authentication**: NextAuth.js with role-based access
 - **Deployment**: Docker, AWS ECS
 
-## 📊 Real-World Use Case
+## Real-World Use Case
 
 Marketing agencies and content creators struggle to understand what content performs best and why. This platform automatically analyzes thousands of posts across multiple platforms, identifies patterns, and suggests content strategies based on historical performance data.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -64,20 +64,6 @@ npm run db:push
 npm run dev
 ```
 
-## 📁 Project Structure
-
-```
-├── src/
-│   ├── app/                 # Next.js 14 app directory
-│   ├── components/          # Reusable React components
-│   ├── lib/                 # Utility functions and configurations
-│   ├── types/               # TypeScript type definitions
-│   ├── hooks/               # Custom React hooks
-│   └── services/            # API services and external integrations
-├── prisma/                  # Database schema and migrations
-├── public/                  # Static assets
-└── docs/                    # Documentation
-```
 
 ## 🔧 Environment Variables
 
@@ -107,14 +93,14 @@ AWS_SECRET_ACCESS_KEY="your-aws-secret-key"
 AWS_REGION="us-east-1"
 ```
 
-## 📈 Key Metrics
+##Key Metrics
 
 - **Content Analysis**: 10,000+ posts processed daily
 - **AI Accuracy**: 94% accuracy in engagement prediction
 - **Performance**: 60% reduction in content strategy time
 - **User Base**: 500+ marketing professionals
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -122,15 +108,12 @@ AWS_REGION="us-east-1"
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Impact
 
-## 🎯 Resume Impact
+Built an AI-powered content analytics platform that processes 10,000+ posts daily, providing real-time insights to 500+ marketing professionals. Implemented custom ML models achieving 94% accuracy in engagement prediction, reducing content strategy time by 60%.
 
-"Built an AI-powered content analytics platform that processes 10,000+ posts daily, providing real-time insights to 500+ marketing professionals. Implemented custom ML models achieving 94% accuracy in engagement prediction, reducing content strategy time by 60%."
-
-## 🆕 Recent Updates
+## Recent Updates
 
 - Enhanced real-time analytics dashboard
 - Improved AI sentiment analysis accuracy
