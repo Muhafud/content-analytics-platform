@@ -15,11 +15,13 @@ A full-stack web app that analyzes written content for readability, sentiment, a
 
 ## Features
 
-- **Readability scoring:** grades text using [method, e.g. Flesch-Kincaid] so writers can see how easy their content is to read
-- **Sentiment classification:** labels content as positive, neutral, or negative using [library or model you used]
-- **Keyword density analysis:** finds the most-used terms and flags overuse
-- **Live dashboards:** Chart.js visualizations that update in real time over WebSockets
-- **REST API:** Node.js/Express endpoints for submitting content and fetching results, backed by indexed MongoDB collections
+- **AI-generated insights:** sends content to the OpenAI API for sentiment analysis, topic clustering, and content recommendations, storing each result with a confidence score
+- **Engagement tracking:** records likes, shares, comments, views, and engagement rate per post across platforms like LinkedIn, Instagram, and YouTube
+- **Live dashboards:** Recharts and D3 visualizations that update in real time over Socket.io
+- **Teams and roles:** organizations with owner, admin, member, and viewer roles
+- **Authentication:** sign-in with NextAuth.js, sessions stored in PostgreSQL
+- **Reports:** daily, weekly, monthly, and custom performance reports
+
 
 
 ## Architecture
