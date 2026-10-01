@@ -52,5 +52,13 @@ npm start
 
 ## What I Learned
 
-- [One or two sentences on a real challenge, e.g. keeping dashboard updates in sync over WebSockets without flooding the client]
-- [Something you'd do differently or add next]
+- **Throttling real-time updates:** Pushing every change over WebSockets made the dashboard re-render constantly. Batching updates on the server and sending them at a fixed interval kept the charts smooth without losing data.
+- **Indexing matters early:** Queries slowed down as more content was stored. Adding MongoDB indexes on the fields I filtered and sorted by most (like creation date and content ID) made lookups noticeably faster.
+- **Keeping heavy work off the request path:** Running the analysis directly inside API requests made responses slow. Separating submission from processing and notifying the client when results were ready made the app feel much more responsive.
+- **Text analysis has limits:** Sentiment scoring struggled with sarcasm and mixed tones, which taught me to treat the scores as signals, not ground truth.
+
+## What's Next
+
+- Add user accounts so people can track their content over time
+- Write tests for the analysis pipeline and API endpoints
+- Deploy with a CI/CD pipeline so updates go live automatically
