@@ -9,7 +9,7 @@ A full-stack web app that analyzes written content for readability, sentiment, a
 ![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=flat&logo=chartdotjs&logoColor=white)
 
 
-![Landing page](docs/landing.png)
+
 
 ---
 
@@ -21,11 +21,6 @@ A full-stack web app that analyzes written content for readability, sentiment, a
 - **Live dashboards:** Chart.js visualizations that update in real time over WebSockets
 - **REST API:** Node.js/Express endpoints for submitting content and fetching results, backed by indexed MongoDB collections
 
-## Screenshots
-
-| Dashboard | Analysis results |
-|---|---|
-| ![Dashboard](docs/dashboard.png) | ![Results](docs/results.png) |
 
 ## Architecture
 
